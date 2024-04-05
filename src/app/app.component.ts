@@ -8,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Ngrx_task';
 
-  onClick(){
-    
-  }
-  ngOnInit(){
-    let array = [];
+  array:any[] = [];
+  value: any;
+  key: any;
 
+  onAdd() {
+    let arr = this.array;
+    arr.push({key: this.key, value: this.value});
+    this.array = arr;
   }
-  
+  ngOnInit() {}
+
 }

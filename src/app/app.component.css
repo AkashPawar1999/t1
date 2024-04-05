@@ -4,24 +4,35 @@
     display: flex;
     width: 100%;
 }
+.block {
+    padding: 10px;
+    margin: 10px;
+    display: inline;
+    width: 100%;
+}
+.row, .row1 {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
 .row1 {
     width: 50%;
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
 }
 .row2 {
     width: 50%;
 }
 
-.btn {
-    margin-top: 20px;
-    float: right;
-
+.but {
+    margin: 25px;
 }
 
 table, th, tr {
     width: 50%;
     padding: 10px;
     text-align: center;
+    float: center;
     /* border: 1px solid black; */
 }

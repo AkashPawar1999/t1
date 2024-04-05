@@ -1,18 +1,33 @@
 <div class="container">
-  <div class="row1">
-    <div class="col-sm-2">
-      <label for="key">Key</label>
-      <input type="text" id="key" name="key">
+  <div class="block">
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="key">Key</label>
+        <input type="text" id="key" name="key">
+      </div>
+      <div class="col-sm-4">
+        <label for="value">Value</label>
+        <input type="text" id="value" name="value">
+      </div>
+      <div class="col-sm-3">
+        <button type="submit" value="submit" class="but" (click)="onAdd()">Add</button>
+      </div>
     </div>
-    <div class="col-sm-2">
-      <label for="value">Value</label>
-      <input type="text" id="value" name="value">
-    </div>
-    <div class="col-sm-2">
-      <button type="submit" value="submit" class="btn btn-success" (click)="onClick()">Add</button>
+
+    <div class="row1">
+      <div class="col-sm-4">
+        <label for="key">Key1</label>
+        <input type="text" id="key" name="key">
+      </div>
+      <div class="col-sm-4">
+        <label for="value">Key2</label>
+        <input type="text" id="value" name="value">
+      </div>
+      <div class="col-sm-3">
+        <button type="submit" value="submit" class="but">Concat</button>
+      </div>
     </div>
   </div>
-
   <div class="row2">
     <div>
       <table border="1px solid black">
@@ -33,5 +48,4 @@
       </table>
     </div>
   </div>
-
 </div>
