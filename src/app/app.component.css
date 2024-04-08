@@ -1,38 +1,19 @@
-.container {
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    width: 100%;
+.second {
+    margin-top: 50px;
 }
-.block {
-    padding: 10px;
-    margin: 10px;
-    display: inline;
-    width: 100%;
-}
-.row, .row1 {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-}
-.row1 {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-}
-.row2 {
-    width: 50%;
+.first {
+    margin-top: 10px;
 }
 
-.but {
-    margin: 25px;
-}
-
-table, th, tr {
-    width: 50%;
+table {
+    margin: 50px;
+    /* align-items: center; */
     padding: 10px;
-    text-align: center;
-    float: center;
     /* border: 1px solid black; */
+}
+
+table, tr, th, td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
 }
