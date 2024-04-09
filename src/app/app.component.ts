@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   newValue: string = '';
   key1: string = '';
   key2: string = '';
-  editingIndex: number | null = null; // Add this property to keep track of the editing item
+  editingIndex: number | null = null;
 
   addKeyValuePair() {
     if (this.editingIndex !== null) {
@@ -21,11 +21,10 @@ export class AppComponent implements OnInit {
       this.keyValuePairs[this.editingIndex] = { key: this.newKey, value: this.newValue };
       this.editingIndex = null; // Reset editing index
     } else {
-      // Add new entry
+      // Add new entry if editingIndex == null
       this.keyValuePairs.push({ key: this.newKey, value: this.newValue });
     }
-
-    // this.keyValuePairs.push({ key: this.newKey, value: this.newValue });
+    
     this.newKey = '';
     this.newValue = '';
   }
@@ -41,8 +40,8 @@ export class AppComponent implements OnInit {
   }
 
   startEdit(index: number): void {
-    this.editingIndex = index; // Set the index to the currently editing item
-    this.newKey = this.keyValuePairs[index].key;
+    this.editingIndex = index;
+    this.keyValuePairs[index].key;
     this.newValue = this.keyValuePairs[index].value;
   }
   ngOnInit() {}

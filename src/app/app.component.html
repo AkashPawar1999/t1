@@ -1,25 +1,28 @@
-<div class="first">
-  <input [(ngModel)]="newKey" placeholder="Key" />
-  <input [(ngModel)]="newValue" placeholder="Value" />
-  <button (click)="addKeyValuePair()">Add</button>
+<div class="left-section">
+  <div class="first">
+    <input [(ngModel)]="newKey" placeholder="Key" />
+    <input [(ngModel)]="newValue" placeholder="Value" />
+    <button (click)="addKeyValuePair()">Add</button>
+  </div>
+  
+  <div class="second" >
+    <input [(ngModel)]="key1" placeholder="Key1" />
+    <input [(ngModel)]="key2" placeholder="Key2" />
+    <button (click)="concatValues()">Concat</button>
+  </div>
 </div>
 
-<div class="second" >
-  <input [(ngModel)]="key1" placeholder="Key1" />
-  <input [(ngModel)]="key2" placeholder="Key2" />
-  <button (click)="concatValues()">Concat</button>
+<div class="right-section">
+  <table>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let item of keyValuePairs; let i=index">
+      <td>{{item.key}}</td>
+      <td>{{item.value}}</td>
+      <td><button (click)="startEdit(i)">edit</button></td>
+    </tr>
+  </table>
 </div>
-
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Value</th>
-    <th> </th>
-  </tr>
-  <tr *ngFor="let item of keyValuePairs; let i=index">
-    <td>{{item.key}}</td>
-    
-    <td>{{item.value}}</td>
-    <td><button (click)="startEdit(i)">edit</button></td>
-  </tr>
-</table>
